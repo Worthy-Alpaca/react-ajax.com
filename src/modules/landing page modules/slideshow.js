@@ -14,28 +14,42 @@ function Slideshow() {
     var slideIndex = 0;    
     
     function showSlides(n) {
-
         var i;
         const slides = document.getElementsByClassName("mySlides");
         const dots = document.getElementsByClassName("dot");
+        console.log(slides)
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
         for (i = 0; i < slides.length; i++) {
-            slides[i].classList.remove("display");
+            slides[i].style.display = "none";
         }
         for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" active", "");
         }
-        slideIndex++;
-        if (slideIndex > slides.length) { slideIndex = 1 }
-        slides[slideIndex - 1].classList.add("display");
-        /* dots[slideIndex - 1].className += " active"; */
-        setTimeout(showSlides, 5000); // Change image every 5 seconds
+        slides[n -1].style.display = "block";
+        dots[n -1].className += " active";
+    }
+
+    const load1 = () => {
+        showSlides(1);
+    }
+    const load2 = () => {
+        showSlides(2);
+    }
+    const load3 = () => {
+        showSlides(3);
+    }
+    const load4 = () => {
+        showSlides(4);
     }
 
     window.onload = () => {        
         var slideIndex = 1;
-        var slides = document.getElementsByClassName("mySlides")
+        var slides = document.getElementsByClassName("mySlides");
+        const dots = document.getElementsByClassName("dot");
         var display = Math.floor(slides.length * Math.random());
         slides[display].classList.toggle("display");
+        dots[display].className += " active";
     }
 
     return (
@@ -47,10 +61,10 @@ function Slideshow() {
                 <Slide className="mySlides fade" src={showserver} desc='Customize on your server' />   
             </div>
             <div style={{ textAlign: "center" }}>                
-                <span className="dot" onClick></span>
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <span className="dot"></span>
+                <span className="dot" onClick={load1}></span>
+                <span className="dot" onClick={load2}></span>
+                <span className="dot" onClick={load3}></span>
+                <span className="dot" onClick={load4}></span>
             </div>
         </div>
     );
