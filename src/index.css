@@ -1,24 +1,24 @@
 
 body {           
-                background-color: #212729;    
-                height: 100%;
-                padding: 0;
-                margin: 0;
-                font-family: 'Cinzel', serif;
-            } 
-            .setwidth {                
-                width: 1050px;
-                position: relative;
-                margin: 0 auto;
-            }
-            .content {
-                padding: 16px;
-            }
-            .sticky {
-                position: fixed;
-                top: 0;
-                width: 100%;
-            }
-            .sticky+.content {
-                padding-top: 60px;
-            }
+    background-color: #212729;    
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Cinzel', serif;
+ } 
+ .setwidth {
+    width: 1050px;
+    position: relative;
+    margin: 0 auto;
+}
+.content {
+    padding: 16px;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+ }
+ .sticky+.content {
+    padding-top: 60px;
+}
