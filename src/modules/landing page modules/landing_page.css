@@ -1,0 +1,82 @@
+.circle {
+                height: 250px;
+                width: 250px;
+                border-color: #42587E;                
+                border-radius: 50%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            #portrait {
+                background-image: url("../../assets/AJAX.PNG");
+                background-size: 250px;
+            }
+            #placeholder_portrait {
+                height: 65px;
+            }
+            .center {                
+                width: 50%;
+                margin: auto;
+                text-align: center;
+                
+            }
+            #white {
+                color: white;
+            }
+            #invite_field {
+                height: 60%;
+                width: 100%;               
+            }  
+            .placeholder_invite_box {
+                margin: auto;
+                width: 40%;
+                height: 150px;
+            }          
+            .invite_box{ 
+                margin: auto;                
+                height: 70%;
+                background-color: #42587E;
+                padding: 10px;
+                border-radius: 40px;
+                text-align: center;  
+                width: 50%;              
+            }
+            #invite_text {
+                color: white;
+                font-size: 25px;
+                padding-top: 5%;
+                margin-bottom: 5%;
+            }
+            #invite_button {
+                color: white;
+                background-color: #42587E;
+                border: 3px solid white;
+                padding-left: 20%;
+                padding-right: 20%;
+                padding-top: 3%;
+                padding-bottom: 3%;
+                border-radius: 40px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 150%;
+                margin: auto;
+                margin-bottom: 5%;
+                cursor: pointer;
+            }
+            .description_field li{
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }               
+            @media screen and (max-width:768px) {
+                .invite_box{ 
+                    margin: auto;                
+                    height: 70%;
+                    background-color: #42587E;
+                    padding: 10px;
+                    border-radius: 40px;
+                    text-align: center;   
+                    width: auto;             
+                }
+            } 
+            
+            

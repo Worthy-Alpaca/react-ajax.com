@@ -1,0 +1,42 @@
+details {
+                cursor: pointer;
+                font-size: larger;
+                padding-left: 10%;
+                padding-right: 10%;
+                padding-top: 2%;
+                padding-bottom: 2%;
+                border: 3px solid #1c1e1fb4;
+                background-color: #42587E;
+                border-radius: 40px;
+                text-align: left;
+            }
+            .placeholder {
+                height: 65px;
+            }            
+            .center {                
+                width: 50%;
+                margin: auto;
+                text-align: center;
+            }
+            .center a:link {
+                text-decoration: none;
+                color: #42587E;
+            }
+            .description_field {
+                height: 400px;
+                width: 100%;
+                position: relative;
+            }
+            #white {
+                color: white;
+            }            
+            details li {
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+            summary:focus {
+	            outline: none;
+            }   
+            h1 {
+                margin-bottom: 15px;
+            }            
