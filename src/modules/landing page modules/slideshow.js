@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Slide from './slide';
 import './slideshow.css';
 import help from '../../assets/images/help.PNG';
@@ -38,8 +38,7 @@ function Slideshow() {
         showSlides(4);
     }
 
-    window.onload = () => {        
-        var slideIndex = 1;
+    window.onload = () => {
         var slides = document.getElementsByClassName("mySlides");
         const dots = document.getElementsByClassName("dot");
         var display = Math.floor(slides.length * Math.random());
