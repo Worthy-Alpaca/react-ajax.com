@@ -11,15 +11,10 @@ import showserver from '../../assets/images/showserver.PNG';
 
 function Slideshow() {
     
-    var slideIndex = 0;    
-    
     function showSlides(n) {
         var i;
         const slides = document.getElementsByClassName("mySlides");
         const dots = document.getElementsByClassName("dot");
-        console.log(slides)
-        if (n > slides.length) { slideIndex = 1 }
-        if (n < 1) { slideIndex = slides.length }
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
