@@ -12,6 +12,7 @@
 /build
 
 # misc
+update.sh
 .DS_Store
 .env
 .env.local
