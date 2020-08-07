@@ -1,25 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './app';
+//Import React router
+import { BrowserRouter, Switch, Route, IndexRoute, Redirect, useHistory, useLocation } from 'react-router-dom';
+//Import Pages
 import './index.css';
-import Navbar from './modules/essential modules/navbar';
+import Login_Page from './modules/login';
 import Landing_page from './modules/landing_page';
+import Personal_Page from './modules/personal_page';
 import Command_page from './modules/commands';
 import Error_Page from './modules/errors/404';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-/* import * as serviceWorker from './serviceWorker'; */
+//.env Import
+const dotenv = require('dotenv');
+dotenv.config();
 
 ReactDOM.render(
-  <Router>
-    <React.StrictMode>
-      {/* <Navbar /> */}
+  <BrowserRouter>
+    <React.Fragment>
       <Switch>
         <Route path='/' exact component={Landing_page} />
         <Route path='/commands' component={Command_page} />
-        <Route component={Error_Page}/>
-      </Switch>      
-    </React.StrictMode>
-  </Router>,  
+        <Route path='/login' component={Login_Page} />
+        <Route path='/dashboard' component={Personal_Page} />
+        <Route component={Error_Page} />
+      </Switch>
+    </React.Fragment>
+  </BrowserRouter>,
   document.getElementById('root')
 );
-
-/* serviceWorker.unregister(); */

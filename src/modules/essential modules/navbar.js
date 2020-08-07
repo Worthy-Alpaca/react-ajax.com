@@ -1,10 +1,10 @@
 import React from 'react';
 import './navbar.css';
-
+//.env Import
+const dotenv = require('dotenv');
+dotenv.config();
 
 function Navbar() {
-
-  
   
   const extend = () => {
     const burger = document.querySelector(".burger");
@@ -53,7 +53,7 @@ function Navbar() {
       <ul className="nav-links" id='test'>
         <li><a href="/">Home</a></li>
         <li><a href="/commands">Commands</a></li>
-        <li><a className="login" href="/login">Dashboard</a></li>
+        <li><a className="login" href={"/login"}>Dashboard</a></li>
         <li><a href="https://github.com/Worthy-Alpaca/AJAX" target="_blank" rel="noopener noreferrer">GitHub</a></li>
       </ul>
       <div onClick={extend} className="burger">
