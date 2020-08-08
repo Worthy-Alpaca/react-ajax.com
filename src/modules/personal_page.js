@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+//Import Navbar
+import Navbar from './essential modules/navbar';
 
 /* Once the 'Authservice' and 'withAuth' componenets are created, import them into App.js */
 import AuthHelperMethods from '../components/AuthHelperMethods';
@@ -27,13 +28,13 @@ class Personal_Page extends Component {
         let name = null;
         //console.log(this.props.confirm, "1")
 
-        //This will be null until we set up authentication...
         if (this.props.confirm) {
             name = this.props.confirm._id;
         }
 
         return (
             <div className="App">
+                <Navbar/>
                 <div className="main-page">
                     <div className="top-section">
                         <h1>Welcome, {name}</h1>
