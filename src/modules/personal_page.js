@@ -9,15 +9,15 @@ import withAuth from '../components/withAuth';
 
 class Personal_Page extends Component {
 
+    //new Auth instance
     Auth = new AuthHelperMethods();
 
-    /* Create a new instance of the 'AuthHelperMethods' compoenent*/
     state = {
         username: "",
         password: ""
     }
 
-    /* Here will want to add a method to log the user out upon clicking 'Logout' */
+    //logout the User
     _handleLogout = () => {
         this.Auth.logout()        
         this.props.history.replace('/');
@@ -47,7 +47,5 @@ class Personal_Page extends Component {
         );
     }
 }
-
-//In order for this component to be protected, we must wrap it with what we call a 'Higher Order Component' or HOC.
 
 export default withAuth(Personal_Page);
