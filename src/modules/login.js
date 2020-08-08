@@ -27,9 +27,7 @@ class Login extends Component {
     handleFormSubmit = (e) => {
         e.preventDefault();        
 
-        /* Here is where all the login logic will go. Upon clicking the login button, 
-        we would like to utilize a login method that will send our entered credentials over to the server for verification. 
-        Once verified, it should store your token and send you to the protected route. */
+        //handling the login with an API call
         this.Auth.login(this.state.username, this.state.password)
             .then(res => {
                 if (res === false) {
@@ -39,17 +37,19 @@ class Login extends Component {
                 this.props.history.replace("/dashboard");
             })
             .catch(err => {
-                alert(err);
+                const error_message = document.getElementById('error_message');
+                const input1 = document.getElementById('input1');
+                const input2 = document.getElementById('input2');
+                input1.classList.add('border_red');
+                input2.classList.add('border_red');
+                error_message.style.display = 'block';                
             }); 
     }
 
     componentWillMount() {
-
-        /* Here is a great place to redirect someone who is already logged in to the protected route */
+        //redirecting IF already logged in
         if (this.Auth.loggedIn()) {
-            
             //console.log('redirect to dashboard')
-            
             this.props.history.replace('/dashboard');
         }
     }
@@ -62,12 +62,13 @@ class Login extends Component {
                         <img src={AJAX} className="avatar" alt='' />
                     </div>
                     <h1 style={{ color: "red" }}>This doesn't do anything yet</h1>
+                    <h2 id='error_message' style={{ textAlign:'center', display: "none", color: "red"}}>Password or Username incorrect</h2>
                     <div className="container">
                         <label htmlFor="username"><b style={{ color: "white" }}>Username</b></label>
-                        <input type="text" placeholder="Enter Server ID" name="username" onChange={this._handleChange} required />
+                        <input id="input1" type="text" placeholder="Enter Server ID" name="username" onChange={this._handleChange} required />
 
                         <label htmlFor="password"><b style={{ color: "white" }}>Password</b></label>
-                        <input type="password" placeholder="Enter Password" name="password" onChange={this._handleChange} required />
+                        <input id="input2" type="password" placeholder="Enter Password" name="password" onChange={this._handleChange} required />
 
                         <button onClick={this.handleFormSubmit}>Login</button>
                         
