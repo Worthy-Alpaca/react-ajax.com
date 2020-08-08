@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 //Import React router
-import { BrowserRouter, Switch, Route, IndexRoute, Redirect, useHistory, useLocation } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 //Import Pages
 import './index.css';
 import Login_Page from './modules/login';
