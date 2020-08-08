@@ -1,19 +1,15 @@
 import React, { Component } from "react";
+//import picture
 import AJAX from '../assets/AJAX.PNG';
-
-/* We want to import our 'AuthHelperMethods' component in order to send a login request */
-
+//import Authentification modules
 import AuthHelperMethods from '../components/AuthHelperMethods';
-
+//import CSS
 import './login modules/login.css'
-
 
 class Login extends Component {
 
-/* In order to utilize our authentication methods within the AuthService class, we want to instantiate a new object */
     Auth = new AuthHelperMethods();
     
-
     state = {
         username: "",
         password: ""
