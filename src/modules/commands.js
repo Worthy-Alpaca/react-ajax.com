@@ -1,7 +1,9 @@
 import React from 'react';
-import './commands modules/commands.css';
+//import Modules
 import Commands from './commands modules/commands';
 import Navbar from './essential modules/navbar';
+//import CSS
+import './commands modules/commands.css';
 
 function Command_page() {
     return (
