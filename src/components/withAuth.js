@@ -16,7 +16,7 @@ export default function withAuth(AuthComponent) {
         prior to granting them enterance into the app. */
         componentWillMount() {
             if (!Auth.loggedIn()) {
-                this.props.replace('/login')
+                this.props.history.replace('/login')
             }
             else {
                 /* Try to get confirmation message from the Auth helper. */
