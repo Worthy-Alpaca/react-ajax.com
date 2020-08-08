@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 //Import Navbar
 import Navbar from './essential modules/navbar';
-
-/* Once the 'Authservice' and 'withAuth' componenets are created, import them into App.js */
+//import authentification modules
 import AuthHelperMethods from '../components/AuthHelperMethods';
-//Our higher order component
+//component to protect the page
 import withAuth from '../components/withAuth';
 
 class Personal_Page extends Component {

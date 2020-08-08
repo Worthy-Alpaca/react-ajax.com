@@ -1,11 +1,12 @@
 import React from 'react';
+//import CSS
 import './navbar.css';
 //.env Import
 const dotenv = require('dotenv');
 dotenv.config();
 
 function Navbar() {
-  
+  //slider menu handling
   const extend = () => {
     const burger = document.querySelector(".burger");
     const nav = document.querySelector(".nav-links");
@@ -33,7 +34,7 @@ function Navbar() {
 
     burger.classList.toggle('toggle');
   }
-  
+  //sticking Navbar handling
   window.onscroll = function () {
     var navbar = document.getElementById("navBar");
 

@@ -1,4 +1,5 @@
 import React from 'react';
+//import CSS
 import './descriptions.css';
 
 function Description() {
