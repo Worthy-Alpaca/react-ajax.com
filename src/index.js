@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './app';
 //Import React router
 import { BrowserRouter, Switch, Route, IndexRoute, Redirect, useHistory, useLocation } from 'react-router-dom';
 //Import Pages

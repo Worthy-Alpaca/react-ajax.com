@@ -36,7 +36,7 @@ export default class AuthHelperMethods {
                 return false;
         }
         catch (err) {
-            console.log("expired check failed! Line 42: AuthService.js");
+            //console.log("expired check failed! Line 42: AuthService.js");
             return false;
         }
     }
@@ -54,13 +54,13 @@ export default class AuthHelperMethods {
     logout = () => {
         // Clear user token and profile data from localStorage
         localStorage.removeItem('id_token');
-        console.log('Logged out')
+        //console.log('Logged out')
     }
 
     getConfirm = () => {
         // Using jwt-decode npm package to decode the token
         let answer = decode(this.getToken());
-        console.log("Recieved answer!");
+        //console.log("Recieved answer!");
         return answer;
     }
 

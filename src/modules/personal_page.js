@@ -25,7 +25,7 @@ class Personal_Page extends Component {
     //Render the protected component
     render() {
         let name = null;
-        console.log(this.props.confirm, "1")
+        //console.log(this.props.confirm, "1")
 
         //This will be null until we set up authentication...
         if (this.props.confirm) {

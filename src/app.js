@@ -13,11 +13,6 @@ import { BrowserRouter as Router, Switch, Route, IndexRoute, Redirect, useHistor
 const dotenv = require('dotenv');
 dotenv.config();
 
-const verify = () => {
-    axios.post(process.env.REACT_APP_API_ADDRESS + '/verify')
-    console.log("verify here")
-}
-
 function App() {
     return (
         <Router >
