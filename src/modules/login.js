@@ -46,6 +46,10 @@ class Login extends Component {
             }); 
     }
 
+    cancelForm = () => {
+        this.props.history.replace('/');
+    }
+
     componentWillMount() {
         //redirecting IF already logged in
         if (this.Auth.loggedIn()) {
@@ -76,7 +80,7 @@ class Login extends Component {
 
                     <div className="container">
                         <button type="button"
-                            className="cancelbtn"><a style={{ textDecoration: "none", color: "white" }} href="/">Cancel</a></button>
+                            className="cancelbtn" onClick={this.cancelForm}>Cancel</button>
                         <span className="psw"><a style={{ textDecoration: "none", color: "white" }} href="#">Forgot password?</a></span>
                     </div>
                 </form>
