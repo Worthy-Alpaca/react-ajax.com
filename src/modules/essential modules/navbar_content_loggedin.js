@@ -66,10 +66,10 @@ class Navbar_Content_LoggedIn extends Component {
             <div>
                 <nav id="navBar">
                     <h1 className="logo"><a href="/">AJAX</a></h1>
-                    <ul className="nav-links" id='test'>
-                        <li><a onClick={this._handleLogout} href="/">Logout</a></li>
+                    <ul className="nav-links" id='test'>                        
                         <li><a href="/">Home</a></li>
                         <li><a href="/commands">Commands</a></li>
+                        <li><a onClick={this._handleLogout} href="/">Logout</a></li>
                         <li><a className="login" href={"/login"}>Dashboard</a></li>
                         <li><a href="https://github.com/Worthy-Alpaca/AJAX" target="_blank" rel="noopener noreferrer">GitHub</a></li>
                     </ul>
