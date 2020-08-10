@@ -1,69 +1,53 @@
-import React from 'react';
+import React, { Component } from 'react';
 //import CSS
 import './navbar.css';
+//Import different Navbars
+import Navbar_Content from './navbar_content';
+import Navbar_Content_LoggedIn from './navbar_content_loggedin';
+//import authentification modules
+import AuthHelperMethods from '../../components/AuthHelperMethods';
 //.env Import
 const dotenv = require('dotenv');
 dotenv.config();
 
-function Navbar() {
-  //slider menu handling
-  const extend = () => {
-    const burger = document.querySelector(".burger");
-    const nav = document.querySelector(".nav-links");
-    const slide = document.querySelector(".slideshow-container");
-    const navLinks = document.querySelectorAll(".nav-links li");
-    const prev = document.querySelector(".prev");
-    const next = document.querySelector(".next");
 
-    if (slide) {
-      slide.classList.toggle("slideshow-container");
-      slide.classList.toggle("slideshow-background");
-    }
-    if (prev && next) {
-      prev.classList.toggle("prevtoggle");
-      next.classList.toggle("nexttoggle");
-    }
-    nav.classList.toggle("nav-active");
-    navLinks.forEach((link, index) => {
-      if (link.style.animation) {
-        link.style.animation = '';
-      } else {
-        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`
-      }
-    })
+class Navbar extends Component {
 
-    burger.classList.toggle('toggle');
-  }
-  //sticking Navbar handling
-  window.onscroll = function () {
-    var navbar = document.getElementById("navBar");
-
-    var sticky = navbar.offsetTop;
-    
-    if (window.pageYOffset >= sticky) {
-      navbar.classList.add("sticky")      
-    } 
-    if (window.pageYOffset < 2) {
-      navbar.classList.remove("sticky");
-    }
-  }
+  Auth = new AuthHelperMethods();
   
-  return (
-    <nav id="navBar">
-      <h1 className="logo"><a href="/">AJAX</a></h1>
-      <ul className="nav-links" id='test'>
-        <li><a href="/">Home</a></li>
-        <li><a href="/commands">Commands</a></li>
-        <li><a className="login" href={"/login"}>Dashboard</a></li>
-        <li><a href="https://github.com/Worthy-Alpaca/AJAX" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-      </ul>
-      <div onClick={extend} className="burger">
-        <div className="line1"></div>
-        <div className="line2"></div>
-        <div className="line3"></div>
-      </div>
-    </nav>
-  );
+  state = {
+    username: "",
+    password: "",
+  }
+
+  _handleLogout = () => {
+    this.Auth.logout()
+    this.props.history.replace('/');
+  }
+
+  componentWillMount() {
+    //redirecting IF already logged in
+    if (this.Auth.loggedIn()) {
+      //console.log('redirect to dashboard')
+      this.setState({
+        login: true
+      })
+    }
+  }
+
+  render() {
+
+    if (this.state.login) {
+      
+      return (
+        <Navbar_Content_LoggedIn />
+      )
+    } else {
+      return (
+        <Navbar_Content />
+      )
+    }    
+  }
 }
 
 export default Navbar;

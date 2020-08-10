@@ -41,9 +41,6 @@ class Personal_Page extends Component {
                 <div className="top-section">
                     <h1>Welcome, {name}</h1>
                 </div>
-                <div className="bottom-section">
-                    <button onClick={this._handleLogout}>Logout</button>
-                </div>
                 <Subpages />
             </div>
         );
