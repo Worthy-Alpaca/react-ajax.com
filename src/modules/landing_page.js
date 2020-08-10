@@ -12,7 +12,8 @@ import './landing page modules/landing_page.css';
 function Landing_page() {
     return (
         <div>
-            <Navbar/>
+            <Navbar />
+            <div className='placeholder_top'></div>
             <Portrait />
             <div className='placeholder_invite_box'></div>
             <Questions />

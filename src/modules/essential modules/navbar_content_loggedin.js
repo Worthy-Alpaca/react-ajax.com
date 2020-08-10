@@ -51,15 +51,7 @@ class Navbar_Content_LoggedIn extends Component {
         //sticking Navbar handling
         window.onscroll = function () {
             var navbar = document.getElementById("navBar");
-
-            var sticky = navbar.offsetTop;
-
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky")
-            }
-            if (window.pageYOffset < 2) {
-                navbar.classList.remove("sticky");
-            }
+            navbar.classList.add("sticky");            
         }
 
         return (

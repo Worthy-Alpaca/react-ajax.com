@@ -8,7 +8,8 @@ import './commands modules/commands.css';
 function Command_page() {
     return (
         <div>
-            <Navbar/>
+            <Navbar />
+            <div className="placeholder_top"></div>
             <Commands/>
         </div>
     );
