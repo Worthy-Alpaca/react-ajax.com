@@ -30,6 +30,7 @@ export default function withAuth(AuthComponent) {
                 //Error handling
                 catch (err) {
                     //console.log(err);
+                    //Logging out user for security reasons
                     Auth.logout()
                     this.props.history.replace('/login');
                 }
