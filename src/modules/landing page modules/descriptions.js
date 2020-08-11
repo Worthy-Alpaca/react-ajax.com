@@ -39,6 +39,11 @@ function Description() {
                         </h3>
                     </li>
                     <li>
+                        <h3>If you ever forget your prefix you can just mention AJAX and ask for the prefix like so: 
+                         <b> @AJAX prefix?</b>
+                        </h3>
+                    </li>
+                    <li>
                         <h3>The help menu is customized to the permission of the user who calls it and features a multi
                         page
                             setup.</h3>
