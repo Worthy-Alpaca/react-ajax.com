@@ -9,8 +9,8 @@ function Questions() {
             <h1>Questions?</h1>
             <footer>
                 <ul className="footer_list">
-                    <li><h3>Add me on discord</h3></li>
-                    <li>Worthy Alpaca#2063</li>
+                    <li><h3>Join the discord</h3></li>
+                    <li><a href=" https://discord.gg/hJ6Kvs7">HERE</a></li>
                 </ul>
             </footer>
         </div>

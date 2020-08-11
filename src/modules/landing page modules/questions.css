@@ -30,6 +30,12 @@ footer {
     color: white;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+    font-size: larger;
+}
+
 @media screen and (max-width: 768px) {
     .footer_content {
         margin: auto;
