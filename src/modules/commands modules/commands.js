@@ -21,6 +21,7 @@ function Commands() {
                         <li>!role => adds/removes role to all mentioned members</li>
                     </ul>
                 </details>
+                <div className="placeholder"></div>
                 <details>
                     <summary>Information</summary>
                     <ul>
@@ -36,6 +37,7 @@ function Commands() {
                         <li>!whois => Returns user information</li>
                     </ul>
                 </details>
+                <div className="placeholder"></div>
                 <details>
                     <summary>Fun stuff</summary>
                     <ul>
@@ -51,6 +53,7 @@ function Commands() {
                         <li>!urban => Sends an urban dictonary entry</li>
                     </ul>
                 </details>
+                <div className="placeholder"></div>
                 <details>
                     <summary>Setup</summary>
                     <ul>
