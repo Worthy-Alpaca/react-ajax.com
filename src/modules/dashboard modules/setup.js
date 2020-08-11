@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 //import CSS
 import './setup.css';
-//Import Navbar
-import Navbar from '../essential modules/navbar';
 //import authentification modules
 import AuthHelperMethods from '../../components/AuthHelperMethods';
 //Import component to protect the page

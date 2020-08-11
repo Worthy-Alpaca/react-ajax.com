@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 //import CSS
 import './navbar.css';
 //Import different Navbars
-import Navbar_Content from './navbar_content';
-import Navbar_Content_LoggedIn from './navbar_content_loggedin';
+import NavbarContent from './navbar_content';
+import NavbarContentLoggedIn from './navbar_content_loggedin';
 //import authentification modules
 import AuthHelperMethods from '../../components/AuthHelperMethods';
 //.env Import
@@ -40,11 +40,11 @@ class Navbar extends Component {
     if (this.state.login) {
       
       return (
-        <Navbar_Content_LoggedIn />
+        <NavbarContentLoggedIn />
       )
     } else {
       return (
-        <Navbar_Content />
+        <NavbarContent />
       )
     }    
   }

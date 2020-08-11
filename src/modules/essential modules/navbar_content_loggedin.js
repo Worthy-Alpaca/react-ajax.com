@@ -6,7 +6,7 @@ import AuthHelperMethods from '../../components/AuthHelperMethods';
 //component to protect the page
 import withAuth from '../../components/withAuth';
 
-class Navbar_Content_LoggedIn extends Component {
+class NavbarContentLoggedIn extends Component {
     Auth = new AuthHelperMethods();
 
 
@@ -89,4 +89,4 @@ class Navbar_Content_LoggedIn extends Component {
     }
 }
 
-export default withAuth(Navbar_Content_LoggedIn);
+export default withAuth(NavbarContentLoggedIn);

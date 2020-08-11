@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 //import CSS
 import './navbar.css';
-//import authentification modules
-import AuthHelperMethods from '../../components/AuthHelperMethods';
-import { render } from '@testing-library/react';
 
-class Navbar_Content extends Component {
+class NavbarContent extends Component {
 
     render() {
 
@@ -61,4 +58,4 @@ class Navbar_Content extends Component {
     }
 }
 
-export default Navbar_Content;
+export default NavbarContent;
