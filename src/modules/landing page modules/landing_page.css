@@ -14,10 +14,14 @@
                 height: 65px;
             }
             .center {                
-                width: 50%;
+                /* width: 50%; */
                 margin: auto;
                 text-align: center;
                 
+            }
+            .centering {
+                margin: auto;
+                text-align: center;
             }
             #white {
                 color: white;
@@ -71,7 +75,13 @@
             .description_field li{
                 padding-top: 5px;
                 padding-bottom: 5px;
-            }               
+            }   
+            
+            @media screen and (max-width: 550px) {
+                .center {
+                    width: 90%;
+                }
+            }
             @media screen and (max-width:768px) {
                 .invite_box{ 
                     margin: auto;                
@@ -82,6 +92,4 @@
                     text-align: center;   
                     width: auto;             
                 }
-            } 
-            
-            
+            }                         

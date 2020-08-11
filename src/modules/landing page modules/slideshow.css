@@ -3,6 +3,7 @@
   position: relative;
   margin: auto;
   overflow: hidden;
+  z-index: 0;
 }
 
 .SliderCSS {

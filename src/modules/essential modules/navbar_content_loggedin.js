@@ -51,11 +51,20 @@ class Navbar_Content_LoggedIn extends Component {
         //sticking Navbar handling
         window.onscroll = function () {
             var navbar = document.getElementById("navBar");
+            var login_indicator = document.getElementById('login_indicator');
+            login_indicator.classList.add('sticky');
             navbar.classList.add("sticky");            
         }
 
+        let name = null;
+        //console.log(this.props.confirm, "1")
+
+        if (this.props.confirm) {
+            name = this.props.confirm._id;
+        }
+
         return (
-            <div>
+            <div >
                 <nav id="navBar">
                     <h1 className="logo"><a href="/">AJAX</a></h1>
                     <ul className="nav-links" id='test'>                        
@@ -69,8 +78,11 @@ class Navbar_Content_LoggedIn extends Component {
                         <div className="line1"></div>
                         <div className="line2"></div>
                         <div className="line3"></div>
-                    </div>
-                </nav>                
+                    </div>                      
+                </nav>          
+                <div id='login_indicator' className="login_indicator">
+                    <p>Logged in as: {name}</p>
+                </div>
             </div>
 
         );

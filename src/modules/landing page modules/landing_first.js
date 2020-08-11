@@ -7,13 +7,13 @@ function Portrait() {
         <div>
             <div id="placeholder_portrait"></div>
             <div id="portrait" className="circle"></div>
-            <div className="center" id="white">
+            <div className="centering" id="white">
                 <h1 id="head1">Welcome to AJAX</h1>
                 <h2 id="head2">AJAX is a moderation bot for discord.</h2>
                 <h2>It also has an EDSM and INARA API connection so you can use it for Elite: Dangerous servers.</h2>
             </div>
 
-            <div className="center">
+            <div /* className="center" */>
                 <div id="invite_field">
                     <div className="placeholder_invite_box"></div>
                     <div className="invite_box">
