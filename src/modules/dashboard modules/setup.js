@@ -13,7 +13,30 @@ class Setup_Page extends Component {
 
     state = {
         username: "",
-        password: ""
+        password: "",
+        server: []
+    }
+
+    _showserver = async () => {
+        const test = await fetch(process.env.REACT_APP_API_ADDRESS + '/discord/showserver', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'content-type': 'application/json',
+                'auth-token': this.Auth.getToken()
+            },
+            body: JSON.stringify({
+                server_id: this.props.confirm._id
+            })
+        }).then(function (response) {
+            return response.json();
+        })
+        if (test.error) {
+            console.log(test.error)
+        }
+        this.setState({
+            server: test
+        })
     }
 
     render() {
@@ -26,9 +49,11 @@ class Setup_Page extends Component {
         }
 
         return (
-            <div>
+            <div style={{color: 'white'}}>
                 <h1>Logged in as {name}</h1>
                 <h1>This is where we configure the setup process</h1>
+                <button onClick={this._showserver}>Get Server info</button> 
+                <p>{this.state.server.greeting}</p>
             </div>
         );
     }

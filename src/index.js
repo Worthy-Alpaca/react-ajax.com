@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 //Import React router
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
@@ -10,11 +10,17 @@ import Personal_Page from './modules/personal_page';
 import Setup_Page from './modules/dashboard modules/setup';
 import Command_page from './modules/commands';
 import Error_Page from './modules/errors/404';
+import App from './app';
 //.env Import
 const dotenv = require('dotenv');
 dotenv.config();
 
-ReactDOM.render(
+/* ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+) */
+
+ReactDOM.render(  
   <BrowserRouter>
     <React.Fragment>
       <Switch>

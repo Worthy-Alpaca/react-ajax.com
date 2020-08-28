@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import { useRouteMatch, Link, Switch, Route, BrowserRouter as Router } from 'react-router-dom';
+import { useRouteMatch, Link, Switch, Route, BrowserRouter as Router, useParams } from 'react-router-dom';
 //Import Navbar
 import Navbar from './essential modules/navbar';
 import Setup_Page from './dashboard modules/setup';
+//Import CSS
+import './dashboard modules/setup.css';
 //import authentification modules
 import AuthHelperMethods from '../components/AuthHelperMethods';
 //component to protect the page
@@ -22,7 +24,7 @@ class Personal_Page extends Component {
     _handleLogout = () => {
         this.Auth.logout()
         this.props.history.replace('/');
-    }
+    }    
 
     //Render the protected component
     render() {
@@ -38,6 +40,7 @@ class Personal_Page extends Component {
         return (
             <div className="App">
                 <Navbar />
+                <div className="placeholder"></div>
                 <div className="top-section">
                     <h1>Welcome, {name}</h1>
                 </div>
