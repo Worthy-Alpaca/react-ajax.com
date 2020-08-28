@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 //import CSS
 import './navbar.css';
 
@@ -34,16 +35,16 @@ class NavbarContent extends Component {
             burger.classList.toggle('toggle');
         }
         //sticking Navbar handling
-        window.onscroll = function () {
+        /* window.onscroll = function () {
             var navbar = document.getElementById("navBar");
             navbar.classList.add("sticky");   
-        }
+        } */
 
         return (
-            <nav id="navBar">
+            <nav id="navBar" className='sticky'>
                 <h1 className="logo"><a href="/">AJAX</a></h1>
                 <ul className="nav-links" id='test'>
-                    <li><a href="/">Home</a></li>
+                    <li><Link to='/'>Home</Link></li>
                     <li><a href="/commands">Commands</a></li>
                     <li><a className="login" href={"/login"}>Dashboard</a></li>
                     <li><a href="https://github.com/Worthy-Alpaca/AJAX" target="_blank" rel="noopener noreferrer">GitHub</a></li>

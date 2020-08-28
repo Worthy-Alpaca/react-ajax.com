@@ -49,12 +49,12 @@ class NavbarContentLoggedIn extends Component {
             burger.classList.toggle('toggle');
         }
         //sticking Navbar handling
-        window.onscroll = function () {
+        /* window.onscroll = function () {
             var navbar = document.getElementById("navBar");
             var login_indicator = document.getElementById('login_indicator');
             login_indicator.classList.add('sticky');
             navbar.classList.add("sticky");            
-        }
+        } */
 
         let name = null;
         //console.log(this.props.confirm, "1")
@@ -65,7 +65,7 @@ class NavbarContentLoggedIn extends Component {
 
         return (
             <div >
-                <nav id="navBar">
+                <nav id="navBar" className='sticky'>
                     <h1 className="logo"><a href="/">AJAX</a></h1>
                     <ul className="nav-links" id='test'>                        
                         <li><a href="/">Home</a></li>
@@ -80,7 +80,7 @@ class NavbarContentLoggedIn extends Component {
                         <div className="line3"></div>
                     </div>                      
                 </nav>          
-                <div id='login_indicator' className="login_indicator">
+                <div id='login_indicator' className="login_indicator sticky">
                     <p>Logged in as: {name}</p>
                 </div>
             </div>
