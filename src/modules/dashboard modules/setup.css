@@ -1,6 +1,17 @@
-.placeholder{
-    height: 100px;
+.placeholder1{
+    height: 50px;
 }
 .top-section{
     margin-top: 10px;
+}
+.text_box{ 
+    margin: auto;
+    background-color: #42587E;
+    padding: 10px;
+    border-radius: 40px;
+    text-align: center;  
+    max-width: 500px;              
+}
+#white{
+    color: white;
 }

@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-//import Authentification modules
-import AuthHelperMethods from '../../components/AuthHelperMethods';
 
 class Commands extends Component {
 
-    Auth = new AuthHelperMethods();
     constructor(props) {
         super(props);
         this.state = {
@@ -22,7 +19,6 @@ class Commands extends Component {
             headers: {
                 'Accept': 'application/json',
                 'content-type': 'application/json',
-                'auth-token': this.Auth.getToken()
             }
         }).then(res => res.json())
             .then(
@@ -34,10 +30,7 @@ class Commands extends Component {
                         fun: result.fun,
                         setup: result.setup
                     });
-                },
-                // Note: it's important to handle errors here
-                // instead of a catch() block so that we don't swallow
-                // exceptions from actual bugs in components.
+                },                
                 (error) => {
                     this.setState({
                         isLoaded: true,
@@ -50,9 +43,9 @@ class Commands extends Component {
     render() {
         const { error, isLoaded, moderation, info, fun, setup } = this.state;
         if (error) {
-            return <div>Error: {error.message}</div>;
+            return <div className="center" id="white">Error: {error.message}</div>;
         } else if (!isLoaded) {
-            return <div>Loading...</div>;
+            return <div className="center" id="white">Loading...</div>;
         } else {
             return (
                 <div>

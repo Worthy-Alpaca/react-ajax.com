@@ -41,29 +41,15 @@ class Personal_Page extends Component {
             <div className="App">
                 <Navbar />
                 <div className="placeholder"></div>
-                <div className="top-section">
-                    <h1>Welcome, {name}</h1>
+                <div className="placeholder"></div>
+                <div className="center" id="white">
+                    <h1>Welcome to the Server Dashboard</h1>
+                    <h2>Here you can currently see how your server is configured</h2>
                 </div>
-                <Subpages />
+                <Setup_Page/>
             </div>
         );
     }
-}
-
-function Subpages() {
-    let { path, url } = useRouteMatch();
-
-    return (
-        <Router>
-            <div>
-                <Link to={`${url}/setup`}>Setting up the bot</Link>
-
-                <Switch>
-                    <Route exact path={`${path}/setup`} component={Setup_Page}/>
-                </Switch>
-            </div>
-        </Router>
-    )
 }
 
 export default withAuth(Personal_Page);
