@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { useRouteMatch, Link, Switch, Route, BrowserRouter as Router, useParams } from 'react-router-dom';
 //Import Navbar
 import Navbar from './essential modules/navbar';
 import Setup_Page from './dashboard modules/setup';
@@ -28,14 +27,6 @@ class Personal_Page extends Component {
 
     //Render the protected component
     render() {
-        let name = null;
-        //console.log(this.props.confirm, "1")
-
-        if (this.props.confirm) {
-            name = this.props.confirm._id;
-        }
-
-        
 
         return (
             <div className="App">

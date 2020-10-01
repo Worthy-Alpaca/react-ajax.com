@@ -10,8 +10,18 @@
     padding: 10px;
     border-radius: 40px;
     text-align: center;  
-    max-width: 500px;              
+    max-width: 500px;                 
+}
+.floating{
+    display: flex;
+    justify-content: space-around;
 }
 #white{
     color: white;
+}
+@media screen and (max-width:1024px){
+    .floating{
+        display: contents;
+        justify-content: space-around;
+    }
 }
