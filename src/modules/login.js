@@ -65,7 +65,6 @@ class Login extends Component {
                     <div className="imgcontainer">
                         <img src={AJAX} className="avatar" alt='' />
                     </div>
-                    <h1 style={{ color: "red" }}>This doesn't do anything yet</h1>
                     <h2 id='error_message' style={{ textAlign:'center', display: "none", color: "red"}}>Password or Username incorrect</h2>
                     <div className="container">
                         <label htmlFor="username"><b style={{ color: "white" }}>Username</b></label>
