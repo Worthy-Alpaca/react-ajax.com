@@ -82,8 +82,7 @@ class Setup_Page extends Component {
                 <div className="center" id="white">
                     <div className="placeholder1"></div>
                     <div className="text_box">
-                        <h3>Server Name</h3>
-                        <p>{server.data.name}</p>
+                        <h2>{server.data.name}</h2>
                     </div>
                     <div className="floating">
                         <div>
