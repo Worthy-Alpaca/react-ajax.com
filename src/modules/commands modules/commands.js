@@ -28,7 +28,8 @@ class Commands extends Component {
                         moderation: result.moderation,
                         info: result.info,
                         fun: result.fun,
-                        setup: result.setup
+                        setup: result.setup,
+                        music: result.music,
                     });
                 },                
                 (error) => {
@@ -41,7 +42,7 @@ class Commands extends Component {
     }
 
     render() {
-        const { error, isLoaded, moderation, info, fun, setup } = this.state;
+        const { error, isLoaded, moderation, info, fun, setup, music } = this.state;
         if (error) {
             return <div className="center" id="white">Error: {error.message}</div>;
         } else if (!isLoaded) {
@@ -56,7 +57,7 @@ class Commands extends Component {
                             <summary>Moderation</summary>
                             <ul>
                                 {moderation.map(item => (
-                                    <li>{item}</li>
+                                    <li key={item}>{item}</li>
                                 ))}
                             </ul>
                         </details>
@@ -65,7 +66,7 @@ class Commands extends Component {
                             <summary>Information</summary>
                             <ul>
                                 {info.map(item => (
-                                    <li>{item}</li>
+                                    <li key={item}>{item}</li>
                                 ))}
                             </ul>
                         </details>
@@ -74,7 +75,17 @@ class Commands extends Component {
                             <summary>Fun Stuff</summary>
                             <ul>
                                 {fun.map(item => (
-                                    <li>{item}</li>
+                                    <li key={item}>{item}</li>
+                                ))}
+                            </ul>
+                        </details>
+                        <div className="placeholder"></div>
+                        <details>
+                            <summary>Music</summary>
+                            <p style={{color:"red"}}>This is still under construction</p>
+                            <ul>
+                                {music.map(item => (
+                                    <li key={item}>{item}</li>
                                 ))}
                             </ul>
                         </details>
@@ -83,12 +94,11 @@ class Commands extends Component {
                             <summary>Setup</summary>
                             <ul>
                                 {setup.map(item => (
-                                    <li>{item}</li>
+                                    <li key={item}>{item}</li>
                                 ))}
                             </ul>
                         </details>
-
-
+                        <div className="placeholder"></div>
                     </div>
                 </div>
             );
