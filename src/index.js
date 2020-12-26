@@ -15,11 +15,6 @@ import App from './app';
 const dotenv = require('dotenv');
 dotenv.config();
 
-/* ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-) */
-
 ReactDOM.render(  
   <BrowserRouter>
     <React.Fragment>
