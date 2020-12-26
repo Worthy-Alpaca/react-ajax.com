@@ -34,11 +34,6 @@ class NavbarContent extends Component {
 
             burger.classList.toggle('toggle');
         }
-        //sticking Navbar handling
-        /* window.onscroll = function () {
-            var navbar = document.getElementById("navBar");
-            navbar.classList.add("sticky");   
-        } */
 
         return (
             <nav id="navBar" className='sticky'>
