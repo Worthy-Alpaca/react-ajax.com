@@ -10,6 +10,7 @@ import Personal_Page from './modules/personal_page';
 import Setup_Page from './modules/dashboard modules/setup';
 import Command_page from './modules/commands';
 import Error_Page from './modules/errors/404';
+import Edit from './modules/dashboard modules/edit'
 import App from './app';
 //.env Import
 const dotenv = require('dotenv');
@@ -23,7 +24,7 @@ ReactDOM.render(
         <Route path='/commands' component={Command_page} />
         <Route path='/login' component={Login_Page} />
         <Route path='/dashboard' component={Personal_Page} />
-        <Route path='/dashboard/setup' component={Setup_Page} />
+        <Route path='/dashboard/edit' component={Edit} />
         <Route component={Error_Page} />
       </Switch>
     </React.Fragment>
