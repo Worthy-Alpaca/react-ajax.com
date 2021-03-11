@@ -8,7 +8,7 @@
     margin: auto;
     background-color: #42587E;
     padding: 10px;
-    border-radius: 40px;
+    border-radius: 30px;
     text-align: center;  
     max-width: 500px;                 
 }
@@ -19,6 +19,19 @@
 #white{
     color: white;
 }
+
+p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width:1430px){
+    .floating{
+        display: contents;
+        justify-content: space-around;
+    }
+}
+
 @media screen and (max-width:1024px){
     .floating{
         display: contents;

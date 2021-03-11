@@ -175,15 +175,15 @@ class Edit extends Component {
         return (
             <div>
                 <div>
-                    <button onClick={this.showOverlaySelect}>{this.props.field}</button>
+                    <button className="editButton" onClick={this.showOverlaySelect}>EDIT</button>
                 </div>
                 <div id="id01" className="modal">
                     <form className="modal-content animate">
                         <div className="container">
                             <h1 id="white">{name}</h1>
-                            <label for="value"><b>{this.props.name}</b></label>
+                            <label for="value"><b>Please enter a text</b></label>
                             <input id="input1" type="text" name="value" onChange={this._handleChange} required />
-                            <button onClick={this._send}>Update</button>
+                            <button className="confbtn" onClick={this._send}>Update</button>
                             <button className="cancelbtn" onClick={this.cancel}>Cancel</button>
                         </div>
                         
@@ -193,9 +193,9 @@ class Edit extends Component {
                     <form className="modal-content animate">
                         <div className="container">
                             <h1 id="white">{name}</h1>
-                            <label for="psw"><b>{this.props.name}</b></label>
+                            <label for="value"><b>Please select a channel</b></label>
                             <Dropdown options={channels} onChange={this._handleChange} value={channels[0]}></Dropdown>
-                            <button onClick={this._send}>Update</button>
+                            <button className="confbtn" onClick={this._send}>Update</button>
                             <button className="cancelbtn" onClick={this.cancel}>Cancel</button>
                         </div>
                     </form>
@@ -204,9 +204,9 @@ class Edit extends Component {
                     <form className="modal-content animate">
                         <div className="container">
                             <h1 id="white">{name}</h1>
-                            <label for="psw"><b>{this.props.name}</b></label>
+                            <label for="value"><b>Please select a role</b></label>
                             <Dropdown options={roles} onChange={this._handleChange} value={roles[0]}></Dropdown>
-                            <button onClick={this._send}>Update</button>
+                            <button className="confbtn" onClick={this._send}>Update</button>
                             <button className="cancelbtn" onClick={this.cancel}>Cancel</button>
                         </div>
                     </form>
