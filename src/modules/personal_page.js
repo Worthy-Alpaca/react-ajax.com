@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 //Import Navbar
 import Navbar from './essential modules/navbar';
-import Setup_Page from './dashboard modules/setup';
+import SetupPage from './dashboard modules/setup';
 //Import CSS
 import './dashboard modules/setup.css';
 //import authentification modules
@@ -37,7 +37,7 @@ class Personal_Page extends Component {
                     <h1>Welcome to the Server Dashboard</h1>
                     <h2>Here you can currently see how your server is configured</h2>
                 </div>
-                <Setup_Page/>
+                <SetupPage/>
             </div>
         );
     }

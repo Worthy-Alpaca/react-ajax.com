@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 //Import React router
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
@@ -7,11 +7,9 @@ import './index.css';
 import Login_Page from './modules/login';
 import Landing_page from './modules/landing_page';
 import Personal_Page from './modules/personal_page';
-import Setup_Page from './modules/dashboard modules/setup';
 import Command_page from './modules/commands';
 import Error_Page from './modules/errors/404';
 import Edit from './modules/dashboard modules/edit'
-import App from './app';
 //.env Import
 const dotenv = require('dotenv');
 dotenv.config();

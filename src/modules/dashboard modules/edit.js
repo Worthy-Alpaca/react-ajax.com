@@ -6,7 +6,6 @@ import './edit.css';
 import 'react-dropdown/style.css';
 
 import AuthHelperMethods from '../../components/AuthHelperMethods';
-import withAuth from '../../components/withAuth';
 
 const cookies = new Cookies();
 class Edit extends Component {
@@ -32,12 +31,9 @@ class Edit extends Component {
         const text = document.getElementById('id01');
         const channel = document.getElementById('id02');
         const role = document.getElementById('id03');
-        const f1 = this.props.field;
-        //console.log(this.props, "PROPS showoverlay")
         
         cookies.set('field', this.props.field, { path: '/dashboard' });
         
-        //this.gather()
         if (this.props.type === "text") {
             text.style.display = 'block';
         } else if (this.props.type === "channel") {
@@ -47,7 +43,6 @@ class Edit extends Component {
             
             role.style.display = 'block';
         }
-        //console.log(this.state, "STATE showoverlay")
     }
 
     cancel = (e) => {

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Dropdown from 'react-dropdown';
 //import CSS
 import './setup.css';
 import './edit.css';
@@ -10,7 +9,7 @@ import AuthHelperMethods from '../../components/AuthHelperMethods';
 import withAuth from '../../components/withAuth';
 
 import Edit from './edit';
-class Setup_Page extends Component {
+class SetupPage extends Component {
 
     //new Auth instance
     Auth = new AuthHelperMethods();
@@ -57,7 +56,7 @@ class Setup_Page extends Component {
 
     render() {
 
-        const { error, isLoaded, server, components} = this.state;
+        const { error, isLoaded, server} = this.state;
 
         if (error) {
             return <div className="center" id="white">Error: {error.message}</div>;
@@ -184,4 +183,4 @@ class Setup_Page extends Component {
 
 }
 
-export default withAuth(Setup_Page);
+export default withAuth(SetupPage);
