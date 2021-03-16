@@ -23,7 +23,13 @@ class Personal_Page extends Component {
     _handleLogout = () => {
         this.Auth.logout()
         this.props.history.replace('/');
-    }    
+    }
+    
+    componentDidMount() {
+        if (this.Auth.isTokenExpired(this.Auth.getToken())) {
+            return this._handleLogout()
+        }
+    }
 
     //Render the protected component
     render() {

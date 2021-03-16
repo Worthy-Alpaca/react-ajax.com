@@ -1,5 +1,4 @@
 import decode from 'jwt-decode';
-
 export default class AuthHelperMethods {
     // Initializing important variables
     login = (username, password) => {
@@ -32,8 +31,10 @@ export default class AuthHelperMethods {
             if (decoded.exp < Date.now() / 1000) { // Checking if token is expired.
                 return true;
             }
-            else
+            else {
                 return false;
+            }
+                
         }
         catch (err) {
             //console.log("expired check failed! Line 42: AuthService.js");

@@ -37,6 +37,7 @@ class Login extends Component {
                 this.props.history.replace("/dashboard");
             })
             .catch(err => {
+                console.log(err)
                 const error_message = document.getElementById('error_message');
                 const input1 = document.getElementById('input1');
                 const input2 = document.getElementById('input2');
