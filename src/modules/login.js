@@ -81,7 +81,7 @@ class Login extends Component {
                     <div className="container">
                         <button type="button"
                             className="cancelbtn" onClick={this.cancelForm}>Cancel</button>
-                        <span className="psw"><a style={{ textDecoration: "none", color: "white" }} href="#">Forgot password?</a></span>
+                        <span className="psw"><a style={{ textDecoration: "none", color: "white" }} href="/recover">Forgot password?</a></span>
                     </div>
                 </form>
                 
