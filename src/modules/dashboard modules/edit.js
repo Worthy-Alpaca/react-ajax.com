@@ -22,7 +22,6 @@ class Edit extends Component {
                 field1: null
             }
         };
-        //this.showOverlaySelect = this.showOverlaySelect.bind(this.props.field);
     }
 
     
@@ -32,8 +31,7 @@ class Edit extends Component {
         const channel = document.getElementById('id02');
         const role = document.getElementById('id03');
         
-        //cookies.set('field', this.props.field, { path: '/dashboard' });
-        localStorage.setItem("field", this.props.field);
+        sessionStorage.setItem("field", this.props.field);
         
         if (this.props.type === "text") {
             text.style.display = 'block';
@@ -104,10 +102,9 @@ class Edit extends Component {
         }
         const payload = JSON.stringify({
             guild: guild,
-            field: localStorage.getItem('field'),
+            field: sessionStorage.getItem('field'),
             value: this.nameToId()
         })
-        
 
         fetch(process.env.REACT_APP_API_ADDRESS + `/discord/setup/?guildID=${this.props.id}`, {
             method: 'PUT',
@@ -119,6 +116,7 @@ class Edit extends Component {
             body: payload
         }).then(res => {
             if (res.status === 200) {
+                sessionStorage.removeItem('field');
                 window.location.reload();
             }
         })
@@ -164,8 +162,6 @@ class Edit extends Component {
             })
         }
 
-        
-
         return (
             <div>
                 <div>
@@ -175,7 +171,7 @@ class Edit extends Component {
                     <form className="modal-content animate">
                         <div className="container">
                             <h1 id="white">{name}</h1>
-                            <label htmlfor="value"><b>Please enter a text</b></label>
+                            <label htmlFor="value"><b>Please enter a text</b></label>
                             <input id="input1" type="text" name="value" onChange={this._handleChange} required />
                             <button className="confbtn" onClick={this._send}>Update</button>
                             <button className="cancelbtn" onClick={this.cancel}>Cancel</button>
@@ -187,7 +183,7 @@ class Edit extends Component {
                     <form className="modal-content animate">
                         <div className="container">
                             <h1 id="white">{name}</h1>
-                            <label htmlforfor="value"><b>Please select a channel</b></label>
+                            <label htmlFor="value"><b>Please select a channel</b></label>
                             <Dropdown options={channels} onChange={this._handleChange} value={channels[0]}></Dropdown>
                             <button className="confbtn" onClick={this._send}>Update</button>
                             <button className="cancelbtn" onClick={this.cancel}>Cancel</button>
@@ -198,7 +194,7 @@ class Edit extends Component {
                     <form className="modal-content animate">
                         <div className="container">
                             <h1 id="white">{name}</h1>
-                            <label htmlforfor="value"><b>Please select a role</b></label>
+                            <label htmlFor="value"><b>Please select a role</b></label>
                             <Dropdown options={roles} onChange={this._handleChange} value={roles[0]}></Dropdown>
                             <button className="confbtn" onClick={this._send}>Update</button>
                             <button className="cancelbtn" onClick={this.cancel}>Cancel</button>
