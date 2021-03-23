@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import Dropdown from 'react-dropdown';
-import Cookies from 'universal-cookie';
 
 import './edit.css';
 import 'react-dropdown/style.css';
 
 import AuthHelperMethods from '../../components/AuthHelperMethods';
-
-const cookies = new Cookies();
 class Edit extends Component {
     Auth = new AuthHelperMethods();
     
