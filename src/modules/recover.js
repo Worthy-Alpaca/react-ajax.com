@@ -84,7 +84,6 @@ class Recover extends Component {
                     <div className="container" id="content02">
                         <button type="button"
                             className="cancelbtn" onClick={this.cancelForm}>Cancel</button>
-                        <span className="psw"><a style={{ textDecoration: "none", color: "white" }} href="#">Forgot password?</a></span>
                     </div>
                     <div className="container" id="content03" style={{display: "none"}}>
                         <h2 id='success_message' style={{ textAlign: 'center', color: "white" }}>A message has been sent to the guild owner</h2>
