@@ -32,7 +32,8 @@ class Edit extends Component {
         const channel = document.getElementById('id02');
         const role = document.getElementById('id03');
         
-        cookies.set('field', this.props.field, { path: '/dashboard' });
+        //cookies.set('field', this.props.field, { path: '/dashboard' });
+        localStorage.setItem("field", this.props.field);
         
         if (this.props.type === "text") {
             text.style.display = 'block';
@@ -103,7 +104,7 @@ class Edit extends Component {
         }
         const payload = JSON.stringify({
             guild: guild,
-            field: cookies.get('field'),
+            field: localStorage.getItem('field'),
             value: this.nameToId()
         })
         
