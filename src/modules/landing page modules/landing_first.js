@@ -18,7 +18,7 @@ function Portrait() {
                     <div className="placeholder_invite_box"></div>
                     <div className="invite_box">
                         <p id="invite_text">Want to invite me to your server?</p>
-                        <a href="https://discord.com/api/oauth2/authorize?client_id=682255208125956128&permissions=8&redirect_uri=https%3A%2F%2Fworthyalpaca.de%2F&scope=bot"
+                        <a href="https://discord.com/api/oauth2/authorize?client_id=682255208125956128&permissions=334621815&redirect_uri=https%3A%2F%2Fajax-discord.com&scope=bot"
                             id="invite_button" rel="noopener noreferrer" target="_blank">Invite Me</a>
                     </div>
                 </div>
